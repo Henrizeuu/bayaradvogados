@@ -18,7 +18,7 @@
     <style>
         :root {
             --primary: #2D4B8E;
-            --primary-dark: #1A2849;
+            -- primary-dark: #1A2849;
             --secondary: #D4AF37; /* Toque dourado elegante para autoridade */
             --bg-light: #F8F9FA;
             --text-dark: #1E2530;
