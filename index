@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bayar Advogados - Advocacia Trabalhista especializada na defesa do trabalhador em Canoas e Região Metropolitana. 17 anos de experiência combatendo abusos.">
+    <meta name="keywords" content="advogado trabalhista canoas, direito do trabalho, rescisão indireta, verbas rescisórias, bayar advogados">
+    <title>Bayar Advogados | Advocacia Trabalhista Especializada</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <style>
+        :root {
+            --primary: #2D4B8E;
+            --primary-dark: #1A2849;
+            --secondary: #D4AF37; /* Toque dourado elegante para autoridade */
+            --bg-light: #F8F9FA;
+            --text-dark: #1E2530;
+            --text-light: #FFFFFF;
+            --gray-muted: #6C757D;
+            --border-color: #E2E8F0;
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Reset e Estilos Globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .brand-font {
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        section {
+            padding: 100px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* Alinhamento de títulos */
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary-dark);
+            position: relative;
+            padding-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary);
+        }
+
+        .section-header p {
+            margin-top: 15px;
+            color: var(--gray-muted);
+            font-size: 1.1rem;
+            font-weight: 400;
+        }
+
+        /* Botões */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 35px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--text-light);
+            border: 1px solid var(--primary);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            border-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-light);
+            border: 2px solid var(--text-light);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--text-light);
+            color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-accent {
+            background-color: var(--secondary);
+            color: var(--primary-dark);
+            font-weight: 700;
+        }
+
+        .btn-accent:hover {
+            background-color: #c49f2f;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Header Fixo */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(26, 40, 73, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 20px 0;
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 12px 0;
+            background-color: var(--primary-dark);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo .main-logo {
+            color: var(--text-light);
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+
+        .logo .sub-logo {
+            color: var(--secondary);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 600;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul a {
+            color: var(--text-light);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+        }
+
+        nav ul a:hover {
+            color: var(--secondary);
+        }
+
+        .nav-cta {
+            padding: 8px 18px !important;
+            border: 1px solid var(--secondary);
+            color: var(--secondary) !important;
+        }
+
+        .nav-cta:hover {
+            background-color: var(--secondary);
+            color: var(--primary-dark) !important;
+        }
+
+        .menu-toggle {
+            display: none;
+            color: var(--text-light);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 40, 73, 0.88), rgba(26, 40, 73, 0.92)), url('foto1.webp') no-center/cover no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            color: var(--text-light);
+            padding-top: 120px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2sfr 0.8fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.2rem;
+            line-height: 1.2;
+            margin-bottom: 25px;
+            color: var(--text-light);
+        }
+
+        .hero-content h1 span {
+            color: var(--secondary);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            font-weight: 300;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 20px;
+        }
+
+        .hero-image {
+            position: relative;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 15px;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .hero-badge {
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            background-color: var(--primary);
+            border: 2px solid var(--secondary);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        .hero-badge .number {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            color: var(--secondary);
+            display: block;
+            font-weight: 700;
+        }
+
+        .hero-badge .text {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        /* Faixa de Benefícios Rápidos */
+        .benefits-bar {
+            background-color: var(--primary-dark);
+            padding: 40px 20px;
+            border-bottom: 4px solid var(--secondary);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            color: var(--text-light);
+        }
+
+        .benefit-item i {
+            font-size: 2.5rem;
+            color: var(--secondary);
+        }
+
+        .benefit-item h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .benefit-item p {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* Seção O Grande Problema */
+        .problem-section {
+            background-color: var(--bg-light);
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .problem-list {
+            list-style: none;
+            margin-top: 30px;
+        }
+
+        .problem-list li {
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 25px;
+            font-size: 1.05rem;
+        }
+
+        .problem-list li i {
+            position: absolute;
+            left: 0;
+            top: 4px;
+            color: #C53030;
+            font-size: 1.2rem;
+        }
+
+        .problem-list strong {
+            color: var(--primary-dark);
+        }
+
+        .problem-alert-box {
+            background-color: #FFF5F5;
+            border-left: 4px solid #C53030;
+            padding: 30px;
+            margin-top: 35px;
+        }
+
+        .problem-alert-box h4 {
+            color: #9B2C2C;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .problem-image img {
+            width: 100%;
+            height: 550px;
+            box-shadow: 20px 20px 0px rgba(26, 40, 73, 0.05);
+        }
+
+        /* Seção Serviços (Cards) */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--text-light);
+            border: 1px solid var(--border-color);
+            padding: 40px 30px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary);
+            transform: scaleX(0);
+            transition: var(--transition);
+            transform-origin: left;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            border-color: transparent;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background-color: var(--bg-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            color: var(--primary);
+            font-size: 1.8rem;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-icon {
+            background-color: var(--primary);
+            color: var(--text-light);
+        }
+
+        .service-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.25rem;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: var(--gray-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .service-link {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Seção Sobre a Autoridade */
+        .about-section {
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 15px;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 600px;
+        }
+
+        .about-content h2 {
+            color: var(--text-light);
+        }
+
+        .about-subtitle {
+            color: var(--secondary);
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .about-content p {
+            margin-bottom: 25px;
+            color: rgba(255,255,255,0.85);
+            font-size: 1.05rem;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 30px;
+        }
+
+        .stat-item h4 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            color: var(--secondary);
+            margin-bottom: 5px;
+        }
+
+        .stat-item p {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* Seção Mais Fotos (Institucional/Conexão) */
+        .gallery-section {
+            background-color: var(--bg-light);
+        }
+        
+        .gallery-slider {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding-bottom: 20px;
+            scroll-snap-type: x mandatory;
+        }
+        
+        .gallery-slider::-webkit-scrollbar {
+            height: 8px;
+        }
+        
+        .gallery-slider::-webkit-scrollbar-thumb {
+            background: var(--primary);
+        }
+
+        .gallery-item {
+            flex: 0 0 300px;
+            scroll-snap-align: start;
+            border: 1px solid var(--border-color);
+            background: var(--text-light);
+            padding: 10px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 380px;
+        }
+
+        .gallery-item span {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+        }
+
+        /* Provas Sociais / Depoimentos */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background-color: var(--bg-light);
+            padding: 40px 30px;
+            border-bottom: 3px solid var(--primary);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .stars {
+            color: var(--secondary);
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            color: var(--text-dark);
+            margin-bottom: 25px;
+            font-size: 0.95rem;
+        }
+
+        .client-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .client-info i {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        .client-info h4 {
+            font-size: 1rem;
+            color: var(--primary-dark);
+            font-weight: 700;
+        }
+
+        /* CTA de Meio/Fim de Página */
+        .cta-section {
+            background: linear-gradient(rgba(26, 40, 73, 0.9), rgba(26, 40, 73, 0.95)), url('foto3.webp') center/cover no-repeat;
+            color: var(--text-light);
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .cta-box max-width: 800px {
+            margin: 0 auto;
+        }
+
+        .cta-section h2 {
+            font-size: 2.6rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 35px;
+            color: rgba(255,255,255,0.9);
+        }
+
+        /* FAQ (Tag details) */
+        .faq-section {
+            background-color: var(--bg-light);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        details {
+            background-color: var(--text-light);
+            border: 1px solid var(--border-color);
+            margin-bottom: 15px;
+            padding: 20px;
+            transition: var(--transition);
+        }
+
+        details[open] {
+            border-color: var(--secondary);
+        }
+
+        summary {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--primary-dark);
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: '\f0fe';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            color: var(--secondary);
+            transition: var(--transition);
+        }
+
+        details[open] summary::after {
+            content: '\f146';
+        }
+
+        details p {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+            color: var(--gray-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Localização e Contato */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            color: var(--primary-dark);
+            margin-bottom: 25px;
+        }
+
+        .contact-details {
+            margin-bottom: 35px;
+        }
+
+        .contact-line {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .contact-line i {
+            font-size: 1.3rem;
+            color: var(--secondary);
+            margin-top: 5px;
+        }
+
+        .contact-line p {
+            font-size: 1.05rem;
+        }
+
+        .map-wrapper {
+            width: 100%;
+            height: 400px;
+            border: 1px solid var(--border-color);
+            padding: 10px;
+            background: var(--text-light);
+        }
+
+        .map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            padding: 60px 20px 20px;
+            border-top: 3px solid var(--secondary);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-logo h3 {
+            font-size: 1.6rem;
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+
+        .footer-logo p {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+        }
+
+        .footer-links h4 {
+            font-size: 1.1rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links ul a {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .footer-links ul a:hover {
+            color: var(--text-light);
+            padding-left: 5px;
+        }
+
+        .copyright-bar {
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.5);
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        /* Botão Flutuante do WhatsApp Pulsante */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 999;
+            transition: var(--transition);
+            animation: pulse-whatsapp 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #20ba5a;
+        }
+
+        @keyframes pulse-whatsapp {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+            }
+            70% {
+                box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        /* Responsividade Extrema */
+        @media (max-width: 1024px) {
+            .hero-grid, .problem-grid, .about-grid, .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .services-grid, .benefits-grid, .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .hero-image img, .about-image img {
+                height: 450px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 70px 15px;
+            }
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            .hero-content h1 {
+                font-size: 2.3rem;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary-dark);
+                display: none;
+                border-bottom: 2px solid var(--secondary);
+            }
+            nav.active {
+                display: block;
+            }
+            nav ul {
+                flex-direction: column;
+                padding: 20px;
+                gap: 15px;
+                text-align: center;
+            }
+            .services-grid, .benefits-grid, .testimonials-grid, .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-btns {
+                flex-direction: column;
+            }
+            .hero-badge {
+                bottom: 10px;
+                left: 10px;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="main-logo">BAYAR</span>
+                <span class="sub-logo">Advogados</span>
+            </a>
+            <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#problemas">Direitos Violados</a></li>
+                    <li><a href="#servicos">Áreas de Atuação</a></li>
+                    <li><a href="#sobre">O Escritório</a></li>
+                    <li><a href="#faq">Dúvidas Frequentes</a></li>
+                    <li><a href="#contato" class="nav-cta">Falar com Advogado</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content" data-aos="fade-right">
+                <h1>Chega de abusos. Nós defendemos o seu <span>Trabalho Dignamente</span>.</h1>
+                <p>Sofrendo com irregularidades, verbas atrasadas ou jornadas abusivas? Há 17 anos o escritório Bayar Advogados desmistifica as mentiras dos empregadores e resgata os direitos e a dignidade de quem trabalha de verdade.</p>
+                <div class="hero-btns">
+                    <a href="https://wa.me/5551999511983" target="_blank" class="btn btn-accent"><i class="fab fa-whatsapp" style="margin-right: 10px;"></i> Garantir Meus Direitos</a>
+                    <a href="#servicos" class="btn btn-secondary">Conhecer Serviços</a>
+                </div>
+            </div>
+            <div class="hero-image" data-aos="fade-left">
+                <img src="foto2.webp" alt="Dr. Bayar - Atuação focada na Advocacia Trabalhista">
+                <div class="hero-badge">
+                    <span class="number">17+</span>
+                    <span class="text">Anos de Luta pelo Trabalhador</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="benefits-bar">
+        <div class="container benefits-grid">
+            <div class="benefit-item" data-aos="zoom-in" data-aos-delay="100">
+                <i class="fas fa-balance-scale"></i>
+                <div>
+                    <h3>Atuação Exclusiva</h3>
+                    <p>Foco 100% voltado para a defesa do trabalhador.</p>
+                </div>
+            </div>
+            <div class="benefit-item" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fas fa-headset"></i>
+                <div>
+                    <h3>Atendimento Digital ou Presencial</h3>
+                    <p>Agilidade on-line ou atendimento físico em Canoas/RS.</p>
+                </div>
+            </div>
+            <div class="benefit-item" data-aos="zoom-in" data-aos-delay="300">
+                <i class="fas fa-star"></i>
+                <div>
+                    <h3>Reputação de Excelência</h3>
+                    <p>Nota 4,9 no Google com acolhimento humanizado.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="problemas" class="problem-section">
+        <div class="container problem-grid">
+            <div class="problem-image" data-aos="fade-right">
+                <img src="foto3.webp" alt="Trabalhador buscando orientação legal contra abusos de patrões">
+            </div>
+            <div class="problem-content" data-aos="fade-left">
+                <div style="text-align: left;" class="section-header">
+                    <h2>O Que Estão Fazendo com Você?</h2>
+                    <p>Muitos patrões impõem cenários graves contando que você aceitará calado por medo ou desconhecimento.</p>
+                </div>
+                <ul class="problem-list">
+                    <li><i class="fas fa-exclamation-triangle"></i> <strong>Jornadas Exaustivas e Abusivas:</strong> Plantões ilegais de 12 horas seguidas sem a devida compensação ou descanso.</li>
+                    <li><i class="fas fa-exclamation-triangle"></i> <strong>Desrespeito às Convenções Coletivas (CCT):</strong> Falta de EPIs corretos, uniformes ou a infraestrutura necessária para vigilantes, porteiros e profissionais da saúde.</li>
+                    <li><i class="fas fa-exclamation-triangle"></i> <strong>Atrasos e Erros em Rescisões:</strong> Cálculos propositalmente incorretos das suas verbas rescisórias para pagar menos do que você merece.</li>
+                </ul>
+                <div class="problem-alert-box">
+                    <h4>Cuidado com o Golpe do Medo:</h4>
+                    <p>"Se você me processar, vai ficar com a carteira suja e ninguém mais te contrata." Esta é a maior mentira inventada por empregadores mal-intencionados. Buscar a justiça é um direito constitucional limpo e sigiloso.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Nossa Especialidade Tecnológica e Jurídica</h2>
+                <p>Atuação assertiva e cirúrgica na reparação integral de suas perdas trabalhistas</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon"><i class="fas fa-gavel"></i></div>
+                    <h3>Ações Trabalhistas Gerais</h3>
+                    <p>Ingresso célere em juízo cobrando horas extras, insalubridade, FGTS não recolhido, desvios de função e assédio.</p>
+                    <a href="https://wa.me/5551999511983" target="_blank" class="service-link">Analisar Caso <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon"><i class="fas fa-door-open"></i></div>
+                    <h3>Rescisão Indireta do Contrato</h3>
+                    <p>O direito do trabalhador de "dar a justa causa no patrão" devido a faltas graves ou atraso sistemático de salários.</p>
+                    <a href="https://wa.me/5551999511983" target="_blank" class="service-link">Entender Processo <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Defesa Especializada por CCT</h3>
+                    <p>Ações específicas protegendo as normas protetivas de vigilantes, porteiros, enfermeiros e técnicos de enfermagem.</p>
+                    <a href="https://wa.me/5551999511983" target="_blank" class="service-link">Ver Direitos <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="about-section">
+        <div class="container about-grid">
+            <div class="about-content" data-aos="fade-right">
+                <span class="about-subtitle">Conheça o Defensor dos Seus Direitos</span>
+                <h2>Bayar Advogados</h2>
+                <p>Com 17 anos de sólida atuação no Rio Grande do Sul (focado em Canoas e Região Metropolitana), o escritório Bayar Advogados tem como missão exclusiva a defesa dos direitos de quem trabalha.</p>
+                <p>Liderado pelo Dr. Bayar, o escritório se construiu com base na ética, no comprometimento e em uma profunda empatia com as histórias reais de seus clientes. O foco não é apenas ganhar causas, mas acolher o trabalhador, desmistificar as mentiras contadas pelos empregadores e resgatar a qualidade de vida e a dignidade de cada profissional.</p>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <h4>17 Anos</h4>
+                        <p>De experiência combativa</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>4.9</h4>
+                        <p>Avaliação Google Business</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>100%</h4>
+                        <p>Foco no Trabalhador</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image" data-aos="fade-left">
+                <img src="foto4.webp" alt="Dr. Bayar prestando consultoria em seu escritório em Canoas">
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Presença Firme e Atendimento Humanizado</h2>
+                <p>Estrutura pronta para te acolher no momento de maior necessidade.</p>
+            </div>
+            <div class="gallery-slider" data-aos="fade-up">
+                <div class="gallery-item">
+                    <img src="foto5.webp" alt="Dr. Bayar atuando no ambiente jurídico">
+                    <span>Atendimento Presencial</span>
+                </div>
+                <div class="gallery-item">
+                    <img src="foto6.webp" alt="Consultoria jurídica trabalhista on-line">
+                    <span>Estrutura Tecnológica On-line</span>
+                </div>
+                <div class="gallery-item">
+                    <img src="foto7.webp" alt="Reunião com trabalhador em busca de justiça">
+                    <span>Defesa Inabalável</span>
+                </div>
+                <div class="gallery-item">
+                    <img src="foto8.webp" alt="Análise cuidadosa de documentos trabalhistas">
+                    <span>Análise Estratégica</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="depoimentos">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>O Reconhecimento De Quem Teve Seu Direito Salvo</h2>
+                <p>Veja o que dizem aqueles que saíram do desespero após confiarem no escritório</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p>"Fui acolhido num momento de desespero e sem rumo. O Dr. Bayar foi muito profissional, mostrou carisma e me fez sentir leve em todas as etapas. Ele mergulha no assunto até conseguir solucionar o problema. Recomendo de olhos fechados!"</p>
+                    </div>
+                    <div class="client-info">
+                        <i class="fas fa-user-circle"></i>
+                        <h4>Domingos Mula Cá Júnior</h4>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p>"Profissional dedicado, sério e atencioso, sempre pronto a explicar e tirar todas as minhas dúvidas. Meu processo com ele foi muito rápido. Excelente advogado!"</p>
+                    </div>
+                    <div class="client-info">
+                        <i class="fas fa-user-circle"></i>
+                        <h4>Luciana Camboim</h4>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                    <div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p>"Muito bem atendido desde o início do processo até a finalização da minha causa. Sempre recebi orientação clara, atenção e muito profissionalismo da equipe."</p>
+                    </div>
+                    <div class="client-info">
+                        <i class="fas fa-user-circle"></i>
+                        <h4>Josias Morato</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container cta-box">
+            <h2>Não Permita Que fiquem Com o Fruto Do Seu Suor</h2>
+            <p>A análise inicial do seu caso pode ser feita de forma 100% on-line e sem custos abusivos.</p>
+            <a href="https://wa.me/5551999511983" target="_blank" class="btn btn-accent"><i class="fab fa-whatsapp" style="margin-right: 10px;"></i> Falar Diretamente com Dr. Bayar</a>
+        </div>
+    </section>
+
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Perguntas Frequentes</h2>
+                <p>Esclareça suas principais dúvidas imediatamente</p>
+            </div>
+            <div class="faq-container">
+                <details data-aos="fade-up">
+                    <summary>Vocês atendem apenas presencialmente?</summary>
+                    <p>Não. Para sua total comodidade, oferecemos tanto o atendimento presencial em nosso escritório em Canoas/RS quanto o atendimento 100% on-line com total segurança jurídica.</p>
+                </details>
+                <details data-aos="fade-up">
+                    <summary>Se eu processar a empresa, minha carteira de trabalho vai ficar suja?</summary>
+                    <p>Não, isso é um mito! Essa é uma das maiores mentiras contadas pelos patrões para colocar medo. Buscar os seus direitos na justiça não gera nenhum "alerta" ou mancha na sua carteira de trabalho.</p>
+                </details>
+                <details data-aos="fade-up">
+                    <summary>Sou vigilante/profissional da saúde, tenho direitos diferentes?</summary>
+                    <p>Sim. Além da CLT, sua categoria é regida por Convenções Coletivas de Trabalho (CCT) que garantem direitos específicos (como regras sobre pausas, segurança, validade de colete à prova de balas, EPIs e conforto). Nós analisamos se a sua empresa está cumprindo todas essas regras obrigatórias.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <div class="container contact-grid">
+            <div class="contact-info" data-aos="fade-right">
+                <h3>Agende Uma Avaliação Do Seu Caso</h3>
+                <p style="margin-bottom: 25px; color: var(--gray-muted);">Estamos localizados no coração de Canoas e prontos para lhe receber, ou se preferir, resolver de forma ágil no WhatsApp.</p>
+                <div class="contact-details">
+                    <div class="contact-line">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>R. Santa Helena, 78 - Centro, Canoas - RS, 92310-110</p>
+                    </div>
+                    <div class="contact-line">
+                        <i class="fab fa-whatsapp"></i>
+                        <p>51 99951-1983</p>
+                    </div>
+                </div>
+                <a href="https://wa.me/5551999511983" target="_blank" class="btn btn-primary"><i class="fab fa-whatsapp" style="margin-right: 10px;"></i> Entrar em Contato</a>
+            </div>
+            <div class="map-wrapper" data-aos="fade-left">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3458.024491297148!2d-51.18356070000001!3d-29.921197099999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95197aa42752f807%3A0x26926e27524b5546!2sBayar%20Advogados!5e0!3m2!1spt-BR!2sbr!4v1781527015149!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-logo">
+                <h3>BAYAR ADVOGADOS</h3>
+                <p>Escritório comprometido com a dignidade, justiça e segurança financeira do trabalhador brasileiro. 17 anos derrubando os abusos patronais.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#problemas">Direitos Violados</a></li>
+                    <li><a href="#servicos">Áreas de Atuação</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Contato</h4>
+                <ul>
+                    <li><span style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Telefone: 51 99951-1983</span></li>
+                    <li><span style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Canoas - Rio Grande do Sul</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container copyright-bar">
+            <p>&copy; 2026 Bayar Advogados. Todos os direitos reservados.</p>
+            <p>Desenvolvido por <a href="https://epiverso.com" target="_blank" style="color: var(--secondary); font-weight: bold; text-decoration: none;">EPIVERSO</a></p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5551999511983" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Inicializa animações ao rolar tela
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Efeito de rolagem do Header
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Menu Mobile Trigger
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        mobileMenu.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+        });
+
+        // Fecha menu ao clicar em links (Mobile UX)
+        const navLinks = document.querySelectorAll('#nav-menu a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
